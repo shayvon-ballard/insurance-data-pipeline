@@ -1,0 +1,13 @@
+policy_type,status,total,avg_premium,total_premium
+Term Life,Active,10,224.16,2241.62
+Term Life,Cancelled,15,238.93,3583.89
+Term Life,Lapsed,7,286.29,2004.03
+Term Life,Unknown,6,264.61,1587.64
+Universal Life,Active,11,203.86,2242.47
+Universal Life,Cancelled,11,287.94,3167.34
+Universal Life,Lapsed,6,343.57,2061.44
+Universal Life,Unknown,6,389.08,2334.47
+Whole Life,Active,5,288.89,1444.43
+Whole Life,Cancelled,5,277.08,1385.39
+Whole Life,Lapsed,13,336.29,4371.79
+Whole Life,Unknown,5,313.26,1566.31

@@ -1,0 +1,27 @@
+policy_id,policy_type,status,premium_amount,risk_score,smoker,age
+POL0074,Term Life,Cancelled,353.85,10.0,Yes,28
+POL0091,Universal Life,Lapsed,192.28,9.8,No,61
+POL0083,Whole Life,Active,285.25,9.6,Yes,32
+POL0006,Term Life,Unknown,81.89,9.5,Yes,24
+POL0041,Whole Life,Cancelled,486.05,9.4,No,56
+POL0002,Term Life,Lapsed,334.0,9.4,Yes,58
+POL0034,Universal Life,Unknown,465.47,9.3,No,37
+POL0004,Universal Life,Cancelled,457.44,9.2,Yes,66
+POL0027,Universal Life,Cancelled,437.75,9.0,Yes,58
+POL0055,Whole Life,Lapsed,480.79,8.9,No,37
+POL0009,Universal Life,Cancelled,146.41,8.5,Yes,54
+POL0092,Universal Life,Cancelled,388.34,8.5,No,32
+POL0037,Term Life,Active,297.65,8.4,No,25
+POL0014,Term Life,Active,403.08,8.2,No,39
+POL0015,Universal Life,Lapsed,413.37,8.2,No,29
+POL0035,Whole Life,Unknown,249.41,8.0,Yes,23
+POL0044,Whole Life,Lapsed,124.84,7.8,Yes,57
+POL0089,Universal Life,Active,352.26,7.8,No,47
+POL0082,Whole Life,Cancelled,312.65,7.7,Yes,20
+POL0086,Whole Life,Unknown,372.29,7.6,Yes,36
+POL0080,Whole Life,Unknown,328.72,7.5,No,48
+POL0064,Whole Life,Lapsed,386.59,7.4,No,58
+POL0096,Term Life,Cancelled,498.24,7.4,No,58
+POL0011,Universal Life,Lapsed,470.98,7.3,No,48
+POL0084,Term Life,Cancelled,470.62,7.2,No,36
+POL0013,Universal Life,Active,262.7,7.2,Yes,46

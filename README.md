@@ -2,21 +2,16 @@
 
 ETL pipeline that ingests, validates, transforms, and analyzes insurance data across policy, claims, and underwriting systems.
 
-[![CI](https://github.com/shayvon-ballard/insurance-data-pipeline/actions/workflows/pipeline.yml/badge.svg)](https://github.com/shayvon-ballard/insurance-data-pipeline/actions)
+![CI](https://github.com/shayvon-ballard/insurance-data-pipeline/actions/workflows/pipeline.yml/badge.svg)
 
 ## Overview
 
-This pipeline mirrors real world data engineering workflows used in insurance and financial services. It pulls from three source systems, validates data quality, transforms and joins the datasets, stores results in Parquet format, and runs analytical SQL queries using DuckDB, the same architectural pattern used with Amazon Athena and Redshift in cloud deployments.
+This pipeline mirrors real-world data engineering workflows used in insurance and financial services. It pulls from three source systems, validates data quality, transforms and joins the datasets, stores results in Parquet format, and runs analytical SQL queries using DuckDB — the same architectural pattern used with Amazon Athena and Redshift in cloud deployments.
 
 ## Pipeline Architecture
 
-Raw CSVs (policies, claims, underwriting)
-→ Extract (Pandas)
-→ Validate (Pandera — schema enforcement, type checks, value rules)
-→ Transform (clean, join all three sources)
-→ Load (Parquet via PyArrow)
-→ Query (DuckDB — analytical SQL)
-→ Report (CSV outputs)
+Raw CSVs (policies, claims, underwriting) → Extract (Pandas) → Validate (Pandera) → Transform (clean, join all three sources) → Load (Parquet via PyArrow) → Query (DuckDB analytical SQL) → Report (CSV outputs)
+
 ## Tech Stack
 
 | Tool | Purpose | Cloud Equivalent |
@@ -31,52 +26,21 @@ Raw CSVs (policies, claims, underwriting)
 
 ## Project Structure
 
-```
-insurance-data-pipeline/
-├── src/
-│   ├── generate_data.py    # Synthetic data generation
-│   ├── validate.py         # Pandera schema validation
-│   ├── transform.py        # Data cleaning and joins
-│   ├── query.py            # DuckDB analytical queries
-│   └── report.py           # CSV report generation
-├── data/
-│   ├── raw/                # Source CSVs
-│   └── processed/          # Transformed Parquet files
-├── reports/                # Output reports
-├── tests/                  # pytest test suite
-└── .github/workflows/      # GitHub Actions CI/CD
-```
+src/ contains generate_data.py, validate.py, transform.py, query.py, and report.py. data/ contains raw CSVs and processed Parquet files. reports/ contains CSV output files. tests/ contains the pytest suite. .github/workflows/ contains the GitHub Actions CI/CD pipeline.
+
 ## Data Sources
 
-Synthetic insurance data modeled after real systems of record:
-
-- **policies.csv** — policy type, premium, status, start date
-- **claims.csv** — claim amounts, status, linked policy
-- **underwriting.csv** — risk score, age, smoker status, approval
+Synthetic insurance data modeled after real systems of record. policies.csv covers policy type, premium, status, and start date. claims.csv covers claim amounts, status, and linked policy. underwriting.csv covers risk score, age, smoker status, and approval.
 
 ## Reports Generated
 
-- `policy_summary.csv` — active policies by type with average premiums
-- `claims_summary.csv` — claims breakdown by status and total value
-- `high_risk_policies.csv` — policies with risk score above 7
+policy_summary.csv shows active policies by type with average premiums. claims_summary.csv shows claims breakdown by status and total value. high_risk_policies.csv lists policies with a risk score above 7.
 
 ## Run Locally
 
-```bash
-git clone https://github.com/shayvon-ballard/insurance-data-pipeline.git
-cd insurance-data-pipeline
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python3 src/generate_data.py
-python3 src/validate.py
-python3 src/transform.py
-python3 src/query.py
-python3 src/report.py
-pytest tests/ -v
-```
+Clone the repo, create and activate a virtual environment, run pip install -r requirements.txt, then run each script in order: generate_data.py, validate.py, transform.py, query.py, report.py. Run pytest tests/ -v to execute the full test suite.
 
 ## Certifications
 
 - AWS Cloud Practitioner
-- ISC² Certified in Cybersecurity (CC)
+- ISC2 Certified in Cybersecurity (CC)

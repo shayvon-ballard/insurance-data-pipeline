@@ -2,7 +2,7 @@
 
 ETL pipeline that ingests, validates, transforms, and analyzes insurance data across policy, claims, and underwriting systems.
 
-![CI](https://github.com/shayvon-ballard/insurance-data-pipeline/actions/workflows/pipeline.yml/badge.svg)
+[![CI](https://github.com/shayvon-ballard/insurance-data-pipeline/actions/workflows/pipeline.yml/badge.svg)](https://github.com/shayvon-ballard/insurance-data-pipeline/actions)
 
 ## Overview
 
@@ -36,7 +36,14 @@ insurance-data-pipeline/
 │   ├── generate_data.py    # Synthetic data generation
 │   ├── validate.py         # Pandera schema validation
 │   ├── transform.py        # Data cleaning and joins
-│   ├── query.py
+│   ├── query.py            # DuckDB analytical queries
+│   └── report.py           # CSV report generation
+├── data/
+│   ├── raw/                # Source CSVs
+│   └── processed/          # Transformed Parquet files
+├── reports/                # Output reports
+├── tests/                  # pytest test suite
+└── .github/workflows/      # GitHub Actions CI/CD
 ## Data Sources
 
 Synthetic insurance data modeled after real systems of record:

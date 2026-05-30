@@ -31,6 +31,7 @@ Raw CSVs (policies, claims, underwriting)
 
 ## Project Structure
 
+```
 insurance-data-pipeline/
 ├── src/
 │   ├── generate_data.py    # Synthetic data generation
@@ -44,6 +45,7 @@ insurance-data-pipeline/
 ├── reports/                # Output reports
 ├── tests/                  # pytest test suite
 └── .github/workflows/      # GitHub Actions CI/CD
+```
 ## Data Sources
 
 Synthetic insurance data modeled after real systems of record:
@@ -60,6 +62,7 @@ Synthetic insurance data modeled after real systems of record:
 
 ## Run Locally
 
+```bash
 git clone https://github.com/shayvon-ballard/insurance-data-pipeline.git
 cd insurance-data-pipeline
 python3 -m venv venv
@@ -71,6 +74,7 @@ python3 src/transform.py
 python3 src/query.py
 python3 src/report.py
 pytest tests/ -v
+```
 
 ## Certifications
 

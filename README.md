@@ -4,6 +4,33 @@ ETL pipeline that ingests, validates, transforms, and analyzes insurance data ac
 
 ![CI](https://github.com/shayvon-ballard/insurance-data-pipeline/actions/workflows/pipeline.yml/badge.svg)
 
+## Business Problem
+
+Insurance organizations typically store policy, claims, and underwriting data in separate systems. Without a unified data layer, reporting is slow, risk analysis is fragmented, and data quality issues go undetected upstream.
+
+This pipeline consolidates those three source systems into a single analytics layer — enabling accurate reporting, risk scoring, and claims analysis across 1,000+ policy records and 500+ claims.
+
+## Data Model
+
+```
+Policies
+├── policy_id (PK)
+├── policy_type
+├── premium_amount
+└── status
+     │
+     ├──── Claims (policy_id FK)
+     │         ├── claim_id
+     │         ├── claim_amount
+     │         └── claim_status
+     │
+     └──── Underwriting (policy_id FK)
+               ├── risk_score
+               ├── age
+               ├── smoker
+               └── approved
+```
+
 ## Overview
 
 This pipeline mirrors real-world data engineering workflows used in insurance and financial services. It pulls from three source systems, validates data quality, transforms and joins the datasets, stores results in Parquet format, and runs analytical SQL queries using DuckDB — the same architectural pattern used with Amazon Athena and Redshift in cloud deployments.

@@ -21,11 +21,11 @@ def test_reports_exist():
 
 def test_policies_row_count():
     df = pd.read_csv("data/raw/policies.csv")
-    assert len(df) == 100
+    assert len(df) == 1000  
 
 def test_claims_row_count():
     df = pd.read_csv("data/raw/claims.csv")
-    assert len(df) == 50
+    assert len(df) == 500   
 
 def test_no_null_policy_ids():
     df = pd.read_csv("data/raw/policies.csv")
@@ -39,7 +39,7 @@ def test_duckdb_query():
     con = duckdb.connect()
     con.execute("CREATE VIEW policies AS SELECT * FROM read_parquet('data/processed/policies.parquet')")
     result = con.execute("SELECT COUNT(*) as total FROM policies").fetchdf()
-    assert result["total"][0] == 100
+    assert result["total"][0] == 1000
     con.close()
 
 def test_high_risk_report_has_data():

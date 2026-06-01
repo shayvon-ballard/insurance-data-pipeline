@@ -11,30 +11,30 @@ def random_date(start_year=2022, end_year=2024):
 
 # Policies
 policies = pd.DataFrame({
-    "policy_id": [f"POL{str(i).zfill(4)}" for i in range(1, 101)],
-    "customer_name": [f"Customer_{i}" for i in range(1, 101)],
-    "policy_type": [random.choice(["Term Life", "Whole Life", "Universal Life"]) for _ in range(100)],
-    "start_date": [random_date() for _ in range(100)],
-    "premium_amount": [round(random.uniform(50, 500), 2) for _ in range(100)],
-    "status": [random.choice(["Active", "Lapsed", "Cancelled", None]) for _ in range(100)]
+    "policy_id": [f"POL{str(i).zfill(4)}" for i in range(1, 1001)],
+    "customer_name": [f"Customer_{i}" for i in range(1, 1001)],
+    "policy_type": [random.choice(["Term Life", "Whole Life", "Universal Life"]) for _ in range(1000)],
+    "start_date": [random_date() for _ in range(1000)],
+    "premium_amount": [round(random.uniform(50, 500), 2) for _ in range(1000)],
+    "status": [random.choice(["Active", "Lapsed", "Cancelled", None]) for _ in range(1000)]
 })
 
 # Claims
 claims = pd.DataFrame({
-    "claim_id": [f"CLM{str(i).zfill(4)}" for i in range(1, 51)],
-    "policy_id": [f"POL{str(random.randint(1, 100)).zfill(4)}" for _ in range(50)],
-    "claim_date": [random_date() for _ in range(50)],
-    "claim_amount": [round(random.uniform(1000, 50000), 2) for _ in range(50)],
-    "claim_status": [random.choice(["Approved", "Denied", "Pending", None]) for _ in range(50)]
+    "claim_id": [f"CLM{str(i).zfill(4)}" for i in range(1, 501)],
+    "policy_id": [f"POL{str(random.randint(1, 1000)).zfill(4)}" for _ in range(500)],
+    "claim_date": [random_date() for _ in range(500)],
+    "claim_amount": [round(random.uniform(1000, 50000), 2) for _ in range(500)],
+    "claim_status": [random.choice(["Approved", "Denied", "Pending", None]) for _ in range(500)]
 })
 
 # Underwriting
 underwriting = pd.DataFrame({
-    "policy_id": [f"POL{str(i).zfill(4)}" for i in range(1, 101)],
-    "risk_score": [round(random.uniform(1, 10), 1) for _ in range(100)],
-    "age": [random.randint(18, 75) for _ in range(100)],
-    "smoker": [random.choice(["Yes", "No"]) for _ in range(100)],
-    "approved": [random.choice(["Yes", "No", None]) for _ in range(100)]
+    "policy_id": [f"POL{str(i).zfill(4)}" for i in range(1, 1001)],
+    "risk_score": [round(random.uniform(1, 10), 1) for _ in range(1000)],
+    "age": [random.randint(18, 75) for _ in range(1000)],
+    "smoker": [random.choice(["Yes", "No"]) for _ in range(1000)],
+    "approved": [random.choice(["Yes", "No", None]) for _ in range(1000)]
 })
 
 policies.to_csv("data/raw/policies.csv", index=False)

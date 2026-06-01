@@ -8,7 +8,7 @@ ETL pipeline that ingests, validates, transforms, and analyzes insurance data ac
 
 Insurance organizations typically store policy, claims, and underwriting data in separate systems. Without a unified data layer, reporting is slow, risk analysis is fragmented, and data quality issues go undetected upstream.
 
-This pipeline consolidates those three source systems into a single analytics layer — enabling accurate reporting, risk scoring, and claims analysis across 1,000+ policy records and 500+ claims.
+This pipeline consolidates those three source systems into a single analytics layer, enabling accurate reporting, risk scoring, and claims analysis across 1,000+ policy records and 500+ claims.
 
 ## Data Model
 

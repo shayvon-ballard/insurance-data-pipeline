@@ -44,3 +44,23 @@ Clone the repo, create and activate a virtual environment, run pip install -r re
 
 - AWS Cloud Practitioner
 - ISC2 Certified in Cybersecurity (CC)
+
+
+## Sample Output
+
+### DuckDB Analytical Queries
+SQL queries run against Parquet files showing active policies, claims breakdown, and high risk policy identification across 1,000 policy records.
+
+![DuckDB Query Results](https://github.com/user-attachments/assets/0ebee096-085e-4ba7-bf6e-1aa29bf57974)
+
+### Test Suite — 9/9 Passing
+Full pytest suite validating data integrity, file existence, row counts, and live DuckDB query accuracy.
+
+![pytest Results](https://github.com/user-attachments/assets/f7d1af03-5564-48b1-bb0f-3d140a7a421f)
+
+### CI/CD Pipeline
+GitHub Actions automatically runs the full pipeline on every push — data generation, validation, transformation, and tests.
+
+![GitHub Actions](https://github.com/user-attachments/assets/e006c357-4e32-4779-92be-4988f9879bba)
+
+

@@ -33,7 +33,7 @@ Policies
 
 ## Overview
 
-This pipeline mirrors real-world data engineering workflows used in insurance and financial services. It pulls from three source systems, validates data quality, transforms and joins the datasets, stores results in Parquet format, and runs analytical SQL queries using DuckDB — the same architectural pattern used with Amazon Athena and Redshift in cloud deployments.
+This pipeline mirrors real-world data engineering workflows used in insurance and financial services. It pulls from three source systems, validates data quality, transforms and joins the datasets, stores results in Parquet format, and runs analytical SQL queries using DuckDB, the same architectural pattern used with Amazon Athena and Redshift in cloud deployments.
 
 ## Pipeline Architecture
 
